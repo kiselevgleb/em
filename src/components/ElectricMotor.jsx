@@ -2,11 +2,14 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getOrderInfoRequest, getHitRequest } from '../actions/actionCreators';
 import Loader from 'react-loader';
-import hit from '../content/hit/hit.json';
-import vesta from '../img/vesta.jpg';
+import motors from '../content/motor/motor.json';
+import motor1 from '../img/motor1.jpg';
+import motor2 from '../img/motor2.jpg';
+import motor3 from '../img/motor3.jpg';
+import motor4 from '../img/motor4.jpg';
 import electrobel2 from '../img/electro-bel2.jpg';
 
-export default function Hit(props) {
+export default function ElectricMotor(props) {
     // const { hits, loading, error } = useSelector(state => state.skills);
     // const dispatch = useDispatch();
 
@@ -31,8 +34,8 @@ export default function Hit(props) {
     // if (error) {
     //     return <p className="error">Произошла ошибка!</p>;
     // }
-    console.log(hit)
-    let hits = hit.text;
+    console.log(motors)
+    let hits = motors.text;
     let arr = hits.split('\n\n');
     let arrHits = [];
     let id = 0;
@@ -45,27 +48,21 @@ export default function Hit(props) {
         });
         id++;
     });
-    const [hitsData, setHitsData] = useState(arrHits.slice(0, 3));
+    const [hitsData, setHitsData] = useState(arrHits.slice(0, 4));
 
     return (
         <Fragment>
             <section className="top-sales">
-                <h2 className="text-center">Последние новости</h2>
+                <h2 className="text-center">Двигатель для электромобиля</h2>
                 <div className="row row-line">
                     {hitsData.map(o =>
-                        <div className="col-6">
+                        <div className="col-3">
                             <div className="card card-line">
                                 <p className="card-text">{o.header}</p>
-                                {/* <img src={vesta} className="card-img-top img-fluid" alt={o.header} />
-                            <img src={electrobel2} className="card-img-top img-fluid" alt={o.header} /> */}
-
                                 <img src={o.img} className="card-img-top img-fluid" alt={o.header} />
-                                <div className="card-body">
+                                {/* <div className="card-body">
                                     <p className="card-text">{o.text}</p>
-                                    {/* <p className="card-text">{`${o.price} руб.`}</p> */}
-                                    {/* <a className="btn btn-outline-primary" onClick={() => getOrderRequest(o.id)}>Заказать</a> */}
-
-                                </div>
+                                </div> */}
                             </div>
                         </div>)}
                 </div>

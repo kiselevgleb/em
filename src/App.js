@@ -35,13 +35,13 @@ function App(props) {
         <Route path='/' component={Error404} /> */}
 
         <Route path='/react-shoe-store/build/catalog/:id'  component={ProductInfo} />
-        <Route path='/react-shoe-store/build/404'  component={Error404} />
-        <Route path='/react-shoe-store/build/catalog'  component={Catalog} />
-        <Route path='/react-shoe-store/build/about'  component={About} />
-        <Route path='/react-shoe-store/build/contacts'  component={Contacts} />
-        <Route path='/react-shoe-store/build/cart'  component={Cart} />
-        <Route exact path='/react-shoe-store/build/'  component={Main} />
-        <Route path='/react-shoe-store/build/' component={Error404} />
+        {/* <Route path='/react-shoe-store/build/404'  component={Error404} /> */}
+        <Route path='/electromobiles'  component={Catalog} />
+        <Route path='/elektrovelosiped'  component={About} />
+        {/* <Route path='/react-shoe-store/build/contacts'  component={Contacts} /> */}
+        <Route path='/detskie-elektromobili-2'  component={Cart} />
+        <Route exact path='/'  component={Main} />
+        <Route path='/' component={Error404} />
       </Switch>
     </Router>
   );

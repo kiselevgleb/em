@@ -43,10 +43,10 @@ export default function Header(props) {
     const handleSearchInput = (evt) => {
         setSearchInput(evt.target.value);
     };
-    const handleCart = () => {
-        // props.history.push('/cart');
-        props.history.push('/react-shoe-store/build/cart');
-    };
+    // const handleCart = () => {
+    //     // props.history.push('/cart');
+    //     props.history.push('/react-shoe-store/build/cart');
+    // };
 
     return (
         <Fragment>
@@ -62,27 +62,27 @@ export default function Header(props) {
                                 <ul className="navbar-nav mr-auto">
                                     <li className="nav-item active">
                                         {/* <NavLink className="nav-link" exact to="/" >Главная</NavLink> */}
-                                        <NavLink className="nav-link" exact to="/react-shoe-store/build/" >Главная</NavLink>
+                                        <NavLink className="nav-link" exact to="/" >Главная</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         {/* <NavLink className="nav-link" exact to="/catalog" >Каталог</NavLink> */}
-                                        <NavLink className="nav-link" exact to="/react-shoe-store/build/catalog" >Каталог</NavLink>
+                                        <NavLink className="nav-link" exact to="/electromobiles" >"Электромобили"</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         {/* <NavLink className="nav-link" exact to="/about" >О магазине</NavLink> */}
-                                        <NavLink className="nav-link" exact to="/react-shoe-store/build/about" >О магазине</NavLink>
+                                        <NavLink className="nav-link" exact to="/elektrovelosiped" >Электровелосипеды</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         {/* <NavLink className="nav-link" exact to="/contacts" >Контакты</NavLink> */}
-                                        <NavLink className="nav-link" exact to="/react-shoe-store/build/contacts" >Контакты</NavLink>
+                                        <NavLink className="nav-link" exact to="/detskie-elektromobili-2" >Детские электромобили</NavLink>
                                     </li>
                                 </ul>
                                 <div>
                                     <div className="header-controls-pics">
                                         <div data-id="search-expander" className="header-controls-pic header-controls-search" onClick={handleSearchBut} ></div>
-                                        <div className="header-controls-pic header-controls-cart" onClick={handleCart} >
+                                        {/* <div className="header-controls-pic header-controls-cart" onClick={handleCart} >
                                             {cionInCart !== 0 ? <div><div className="header-controls-cart-full">{cionInCart}</div> <div className="header-controls-cart-menu"></div></div> : <div></div>}
-                                        </div>
+                                        </div> */}
                                     </div>
                                     {searchBut &&
                                         <form data-id="search-form" className="header-controls-search-form form-inline">
