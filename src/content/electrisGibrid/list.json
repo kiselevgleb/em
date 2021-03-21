@@ -13,7 +13,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/honda.jpg"
+          "url": "./images/honda.jpg"
         }
       ],
       "video": []
@@ -70,7 +70,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/toyota-prius.jpg"
+          "url": "./images/toyota-prius.jpg"
         }
       ],
       "video": []
@@ -94,7 +94,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/cad1.jpg"
+          "url": "./images/cad1.jpg"
         }
       ],
       "video": []

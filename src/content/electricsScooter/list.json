@@ -15,11 +15,11 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/samokat1.jpg"
+          "url": "./images1/samodel/samokat1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/samokat2.jpg"
+          "url": "./images1/samodel/samokat2.jpg"
         }
       ],
       "video": []
@@ -67,7 +67,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/samokat.jpg"
+          "url": "./images/samokat.jpg"
         }
       ],
       "video": []
@@ -94,7 +94,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/E-100W.jpg"
+          "url": "./images/E-100W.jpg"
         }
       ],
       "video": []

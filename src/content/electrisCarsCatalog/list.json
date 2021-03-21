@@ -11,7 +11,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/opel.jpg"
+          "url": "./images/opel.jpg"
         }
       ],
       "video": []
@@ -52,11 +52,11 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/tesla1.jpg"
+          "url": "./images1/catalog/tesla1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/tesla2.jpg"
+          "url": "./images1/catalog/tesla2.jpg"
         }
       ],
       "video": []
@@ -73,7 +73,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nissan-esflow.jpg"
+          "url": "./images1/catalog/nissan-esflow.jpg"
         }
       ],
       "video": []
@@ -104,15 +104,15 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nissan_LEAF2.jpg"
+          "url": "./images1/catalog/nissan_LEAF2.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nissan_LEAF.jpg"
+          "url": "./images1/catalog/nissan_LEAF.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nissan_LEAF1.jpg"
+          "url": "./images1/catalog/nissan_LEAF1.jpg"
         }
       ],
       "video": []
@@ -156,19 +156,19 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nob1.jpg"
+          "url": "./images1/catalog/nob1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nob2.jpg"
+          "url": "./images1/catalog/nob2.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nob3.jpg"
+          "url": "./images1/catalog/nob3.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/nob4.jpg"
+          "url": "./images1/catalog/nob4.jpg"
         }
       ],
       "video": []
@@ -220,7 +220,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/ideale_ev-1.jpg"
+          "url": "./images1/catalog/ideale_ev-1.jpg"
         }
       ],
       "video": []
@@ -261,7 +261,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/kandi_1200.jpg"
+          "url": "./images1/catalog/kandi_1200.jpg"
         }
       ],
       "video": []
@@ -298,7 +298,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/kandi_coco_ev.jpg"
+          "url": "./images1/catalog/kandi_coco_ev.jpg"
         }
       ],
       "video": []
@@ -315,7 +315,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/Smart_ForSpeed.jpg"
+          "url": "./images1/catalog/Smart_ForSpeed.jpg"
         }
       ],
       "video": []
@@ -344,7 +344,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/elita_2s.jpg"
+          "url": "./images1/catalog/elita_2s.jpg"
         }
       ],
       "video": []
@@ -373,7 +373,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/elita_4s.jpg"
+          "url": "./images1/catalog/elita_4s.jpg"
         }
       ],
       "video": []
@@ -402,7 +402,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/elita_11s.jpg"
+          "url": "./images1/catalog/elita_11s.jpg"
         }
       ],
       "video": []
@@ -432,7 +432,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/elita_2t.jpg"
+          "url": "./images1/catalog/elita_2t.jpg"
         }
       ],
       "video": []
@@ -462,7 +462,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/elita_4t.jpg"
+          "url": "./images1/catalog/elita_4t.jpg"
         }
       ],
       "video": []
@@ -491,7 +491,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/ematsa_2s.jpg"
+          "url": "./images1/catalog/ematsa_2s.jpg"
         }
       ],
       "video": []
@@ -520,7 +520,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/ematsa_4s.jpg"
+          "url": "./images1/catalog/ematsa_4s.jpg"
         }
       ],
       "video": []
@@ -553,7 +553,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/gem_e2.jpg"
+          "url": "./images1/catalog/gem_e2.jpg"
         }
       ],
       "video": []
@@ -587,7 +587,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/Gem01.jpg"
+          "url": "./images1/catalog/Gem01.jpg"
         }
       ],
       "video": []
@@ -620,7 +620,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/gem_e6.jpg"
+          "url": "./images1/catalog/gem_e6.jpg"
         }
       ],
       "video": []
@@ -652,7 +652,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/gem_es.jpg"
+          "url": "./images1/catalog/gem_es.jpg"
         }
       ],
       "video": []
@@ -685,7 +685,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/gem_el.jpg"
+          "url": "./images1/catalog/gem_el.jpg"
         }
       ],
       "video": []
@@ -718,7 +718,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/gem_elxd.jpg"
+          "url": "./images1/catalog/gem_elxd.jpg"
         }
       ],
       "video": []
@@ -748,11 +748,11 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/Eliica1.jpg"
+          "url": "./images1/catalog/Eliica1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/Eliica.jpg"
+          "url": "./images1/catalog/Eliica.jpg"
         }
       ],
       "video": []
@@ -804,19 +804,19 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/mits2.jpg"
+          "url": "./images1/catalog/mits2.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/mits1.jpg"
+          "url": "./images1/catalog/mits1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/mits3.jpg"
+          "url": "./images1/catalog/mits3.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/mits4.jpg"
+          "url": "./images1/catalog/mits4.jpg"
         }
       ],
       "video": []
@@ -836,11 +836,11 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/rollsphantomelec.jpg"
+          "url": "./images1/catalog/rollsphantomelec.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/catalog/rollsphantomelec2.jpg"
+          "url": "./images1/catalog/rollsphantomelec2.jpg"
         }
       ],
       "video": []

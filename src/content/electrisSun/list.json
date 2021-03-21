@@ -10,15 +10,15 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/solncemobil.jpg"
+          "url": "./images1/samodel/solncemobil.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/solncemobil2.jpg"
+          "url": "./images1/samodel/solncemobil2.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/solncemobil3.jpg"
+          "url": "./images1/samodel/solncemobil3.jpg"
         }
       ],
       "video": []
@@ -34,19 +34,19 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/auto_solar3.jpg"
+          "url": "./images1/samodel/auto_solar3.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/auto_solar2.jpg"
+          "url": "./images1/samodel/auto_solar2.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/auto_solar1.jpg"
+          "url": "./images1/samodel/auto_solar1.jpg"
         },
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/auto_solar.jpg"
+          "url": "./images1/samodel/auto_solar.jpg"
         }
       ],
       "video": [
@@ -84,7 +84,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/SunSwift3.jpg"
+          "url": "./images1/samodel/SunSwift3.jpg"
         }
       ],
       "video": []
@@ -103,7 +103,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/samodel/swiss.jpg"
+          "url": "./images1/samodel/swiss.jpg"
         }
       ],
       "video": []

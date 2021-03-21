@@ -29,7 +29,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images/motor-koleso.jpg"
+          "url": "./images/motor-koleso.jpg"
         }
       ],
       "video": []
@@ -45,7 +45,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/velo/Golden_motor_902.jpg"
+          "url": "./images1/velo/Golden_motor_902.jpg"
         }
       ],
       "video": []
@@ -61,7 +61,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/velo/ProKit_901.jpg"
+          "url": "./images1/velo/ProKit_901.jpg"
         }
       ],
       "video": []
@@ -77,7 +77,7 @@
       "img": [
         {
           "text": "",
-          "url": "http://electro-mobiles.ru/images1/velo/MagicPie.jpg"
+          "url": "./images1/velo/MagicPie.jpg"
         }
       ],
       "video": []
