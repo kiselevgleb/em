@@ -1,98 +1,251 @@
 import {
-  GET_ITEMS_REQUEST,
-  GET_ITEMS_FAILURE,
-  GET_ITEMS_SUCCESS,
-  GET_ITEMSCAT_REQUEST,
-  GET_ITEMSCAT_FAILURE,
-  GET_ITEMSCAT_SUCCESS,
-  GET_CATEGORIES_REQUEST,
-  GET_CATEGORIES_FAILURE,
-  GET_CATEGORIES_SUCCESS,
-  GET_HIT_REQUEST,
-  GET_HIT_FAILURE,
-  GET_HIT_SUCCESS,
-  GET_ADDITEMS_REQUEST,
-  GET_ADDITEMS_FAILURE,
-  GET_ADDITEMS_SUCCESS,
-  SEARCH_ITEMS_REQUEST,
-  SEARCH_ITEMS_FAILURE,
-  SEARCH_ITEMS_SUCCESS,
+  GET_LISTINFO_REQUEST,
+  GET_LISTINFO_FAILURE,
+  GET_LISTINFO_SUCCESS,
+
   GET_ORDERINFO_REQUEST,
   GET_ORDERINFO_FAILURE,
   GET_ORDERINFO_SUCCESS,
-  POST_CART_REQUEST,
-  POST_CART_FAILURE,
-  POST_CART_SUCCESS,
-  GET_CARTDATA_REQUEST,
-  GET_CARTDATA_FAILURE,
-  GET_CARTDATA_SUCCESS,
-  CHANGE_SEARCH_FIELD,
+
+  GET_LISTGIBRID_REQUEST,
+  GET_LISTGIBRID_FAILURE,
+  GET_LISTGIBRID_SUCCESS,
+
+  GET_LISTMOTOR_REQUEST,
+  GET_LISTMOTOR_FAILURE,
+  GET_LISTMOTOR_SUCCESS,
+
+  GET_LISTBETT_REQUEST,
+  GET_LISTBETT_FAILURE,
+  GET_LISTBETT_SUCCESS,
+
+  GET_LISTSUN_REQUEST,
+  GET_LISTSUN_FAILURE,
+  GET_LISTSUN_SUCCESS,
+
+  GET_LISTBIKE_REQUEST,
+  GET_LISTBIKE_FAILURE,
+  GET_LISTBIKE_SUCCESS,
+
+  GET_MOTORWHEEL_REQUEST,
+  GET_MOTORWHEEL_FAILURE,
+  GET_MOTORWHEEL_SUCCESS,
+
+  GET_BIKE_REQUEST,
+  GET_BIKE_FAILURE,
+  GET_BIKE_SUCCESS,
+  
+  GET_SCOOTER_REQUEST,
+  GET_SCOOTER_FAILURE,
+  GET_SCOOTER_SUCCESS,
+
+  GET_BABY_REQUEST,
+  GET_BABY_FAILURE,
+  GET_BABY_SUCCESS,
 } from '../actions/actionTypes'
 
 const initialState = {
-  items: [],
-  categories: [],
-  hits: [],
+  listInfo: {},
+  newsInfo: {},
+  motor: {},
+  gibrid: {},
+  bett: {},
+  sun: {},
+  bike: {},
+  scooter: {},
+  motorWheel: {},
+  bikeMain: {},
+  baby: {},
   loading: false,
   error: null,
-  search: '',
-  orderInfo: {},
-  cart: false,
-  cartData: '[]',
 };
 
 export default function skillsReducer(state = initialState, action) {
   switch (action.type) {
-
-    case GET_CARTDATA_REQUEST:
-      const { setData } = action.payload;
-      console.log(setData)
+    
+    
+    case GET_BABY_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case GET_CARTDATA_FAILURE:
-      const { errorCartData } = action.payload;
+    case GET_BABY_FAILURE:
+      const { errorBaby } = action.payload;
       return {
         ...state,
         loading: false,
-        error: errorCartData,
+        error: errorBaby,
       };
-    case GET_CARTDATA_SUCCESS:
-      const { cartData } = action.payload;
+    case GET_BABY_SUCCESS:
+      const { baby } = action.payload;
       return {
         ...state,
-        cartData: cartData,
+        baby,
         loading: false,
         error: null,
       };
 
-    case POST_CART_REQUEST:
-      const { data } = action.payload;
+    
+    
+    case GET_SCOOTER_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case POST_CART_FAILURE:
-      const { errorCart } = action.payload;
+    case GET_SCOOTER_FAILURE:
+      const { errorScooter } = action.payload;
       return {
         ...state,
         loading: false,
-        error: errorCart,
+        error: errorScooter,
       };
-    case POST_CART_SUCCESS:
-      const { cart } = action.payload;
+    case GET_SCOOTER_SUCCESS:
+      const { scooter } = action.payload;
       return {
         ...state,
-        cart: cart,
+        scooter,
+        loading: false,
+        error: null,
+      };
+
+
+    case GET_BIKE_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_BIKE_FAILURE:
+      const { errorBikeMain } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorBett,
+      };
+    case GET_BIKE_SUCCESS:
+      const { bikeMain } = action.payload;
+      return {
+        ...state,
+        bikeMain,
+        loading: false,
+        error: null,
+      };
+
+
+    case GET_MOTORWHEEL_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_MOTORWHEEL_FAILURE:
+      const { errorMotorWheel } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorMotorWheel,
+      };
+    case GET_MOTORWHEEL_SUCCESS:
+      const { motorWheel } = action.payload;
+      return {
+        ...state,
+        motorWheel,
+        loading: false,
+        error: null,
+      };
+
+
+    case GET_LISTBIKE_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_LISTBIKE_FAILURE:
+      const { errorBike } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorBett,
+      };
+    case GET_LISTBIKE_SUCCESS:
+      const { bike } = action.payload;
+      return {
+        ...state,
+        bike,
+        loading: false,
+        error: null,
+      };
+
+    case GET_LISTSUN_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_LISTSUN_FAILURE:
+      const { errorSun } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorBett,
+      };
+    case GET_LISTSUN_SUCCESS:
+      const { sun } = action.payload;
+      return {
+        ...state,
+        sun,
+        loading: false,
+        error: null,
+      };
+
+    case GET_LISTBETT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_LISTBETT_FAILURE:
+      const { errorBett } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorBett,
+      };
+    case GET_LISTBETT_SUCCESS:
+      const { bett } = action.payload;
+      return {
+        ...state,
+        bett,
+        loading: false,
+        error: null,
+      };
+
+    case GET_LISTINFO_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_LISTINFO_FAILURE:
+      const { errorList } = action.payload;
+      return {
+        ...state,
+        loading: false,
+        error: errorList,
+      };
+    case GET_LISTINFO_SUCCESS:
+      const { listInfo } = action.payload;
+      return {
+        ...state,
+        listInfo,
         loading: false,
         error: null,
       };
 
     case GET_ORDERINFO_REQUEST:
-      const { idInfo } = action.payload;
       return {
         ...state,
         loading: true,
@@ -106,159 +259,55 @@ export default function skillsReducer(state = initialState, action) {
         error: errorInfo,
       };
     case GET_ORDERINFO_SUCCESS:
-      const { orderInfo } = action.payload;
+      const { newsInfo } = action.payload;
       return {
         ...state,
-        orderInfo,
+        newsInfo,
         loading: false,
         error: null,
       };
 
-    case SEARCH_ITEMS_REQUEST:
+    case GET_LISTGIBRID_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case SEARCH_ITEMS_FAILURE:
-      const { errorSearch } = action.payload;
+    case GET_LISTGIBRID_FAILURE:
+      const { errorGibrid } = action.payload;
       return {
         ...state,
         loading: false,
-        error: errorSearch,
+        error: errorGibrid,
       };
-    case SEARCH_ITEMS_SUCCESS:
-      const { itemsSearch } = action.payload;
+    case GET_LISTGIBRID_SUCCESS:
+      const { gibrid } = action.payload;
       return {
         ...state,
-        items: itemsSearch,
+        gibrid,
         loading: false,
         error: null,
       };
-    case CHANGE_SEARCH_FIELD:
-      const { searchChange } = action.payload;
-      const hasQuery = searchChange.trim() === '';
-      if (hasQuery) {
-        return {
-          ...state,
-          search: searchChange
-        };
-      }
-      else {
-        return {
-          ...state,
-          search: searchChange
-        };
-      };
 
-    case GET_ADDITEMS_REQUEST:
-      const { coin, cat } = action.payload;
 
+    case GET_LISTMOTOR_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case GET_ADDITEMS_FAILURE:
-      const { errorAddItems } = action.payload;
+    case GET_LISTMOTOR_FAILURE:
+      const { errorMotor } = action.payload;
       return {
         ...state,
         loading: false,
-        error: errorAddItems,
+        error: errorMotor,
       };
-    case GET_ADDITEMS_SUCCESS:
-      const { additems } = action.payload;
+    case GET_LISTMOTOR_SUCCESS:
+      const { motor } = action.payload;
       return {
         ...state,
-        items: additems,
-        loading: false,
-        error: null,
-      };
-
-    case GET_ITEMSCAT_REQUEST:
-      const { id } = action.payload;
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-    case GET_ITEMSCAT_FAILURE:
-      const { errorItemsCat } = action.payload;
-      return {
-        ...state,
-        loading: false,
-        error: errorItemsCat,
-      };
-    case GET_ITEMSCAT_SUCCESS:
-      const { itemsCat } = action.payload;
-      return {
-        ...state,
-        items: itemsCat,
-        loading: false,
-        error: null,
-      };
-
-    case GET_ITEMS_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-    case GET_ITEMS_FAILURE:
-      const { error } = action.payload;
-      return {
-        ...state,
-        loading: false,
-        error,
-      };
-    case GET_ITEMS_SUCCESS:
-      const { items } = action.payload;
-      return {
-        ...state,
-        items,
-        loading: false,
-        error: null,
-      };
-    case GET_CATEGORIES_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-    case GET_CATEGORIES_FAILURE:
-      const { errorCat } = action.payload;
-      return {
-        ...state,
-        loading: false,
-        error: errorCat,
-      };
-    case GET_CATEGORIES_SUCCESS:
-      const { categories } = action.payload;
-      return {
-        ...state,
-        categories,
-        loading: false,
-        error: null,
-      };
-
-    case GET_HIT_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-    case GET_HIT_FAILURE:
-      const { errorHit } = action.payload;
-      return {
-        ...state,
-        loading: false,
-        error: errorHit,
-      };
-    case GET_HIT_SUCCESS:
-      const { hits } = action.payload;
-      return {
-        ...state,
-        hits,
+        motor,
         loading: false,
         error: null,
       };

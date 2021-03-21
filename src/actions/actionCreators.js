@@ -1,68 +1,170 @@
 import {
-  GET_ITEMS_REQUEST,
-  GET_ITEMS_FAILURE,
-  GET_ITEMS_SUCCESS,
-  GET_ITEMSCAT_REQUEST,
-  GET_ITEMSCAT_FAILURE,
-  GET_ITEMSCAT_SUCCESS,
-  GET_CATEGORIES_REQUEST,
-  GET_CATEGORIES_FAILURE,
-  GET_CATEGORIES_SUCCESS,
-  GET_HIT_REQUEST,
-  GET_HIT_FAILURE,
-  GET_HIT_SUCCESS,
-  GET_ADDITEMS_REQUEST,
-  GET_ADDITEMS_FAILURE,
-  GET_ADDITEMS_SUCCESS,
-  SEARCH_ITEMS_REQUEST,
-  SEARCH_ITEMS_FAILURE,
-  SEARCH_ITEMS_SUCCESS,
+  GET_LISTINFO_REQUEST,
+  GET_LISTINFO_FAILURE,
+  GET_LISTINFO_SUCCESS,
+  
   GET_ORDERINFO_REQUEST,
   GET_ORDERINFO_FAILURE,
   GET_ORDERINFO_SUCCESS,
-  POST_CART_REQUEST,
-  POST_CART_FAILURE,
-  POST_CART_SUCCESS,
-  GET_CARTDATA_REQUEST,
-  GET_CARTDATA_FAILURE,
-  GET_CARTDATA_SUCCESS,
-  CHANGE_SEARCH_FIELD,
+
+  GET_LISTGIBRID_REQUEST,
+  GET_LISTGIBRID_FAILURE,
+  GET_LISTGIBRID_SUCCESS,
+
+  GET_LISTMOTOR_REQUEST,
+  GET_LISTMOTOR_FAILURE,
+  GET_LISTMOTOR_SUCCESS,
+
+  GET_LISTBETT_REQUEST,
+  GET_LISTBETT_FAILURE,
+  GET_LISTBETT_SUCCESS,
+
+  GET_LISTSUN_REQUEST,
+  GET_LISTSUN_FAILURE,
+  GET_LISTSUN_SUCCESS,
+  
+  GET_LISTBIKE_REQUEST,
+  GET_LISTBIKE_FAILURE,
+  GET_LISTBIKE_SUCCESS,
+  
+  GET_MOTORWHEEL_REQUEST,
+  GET_MOTORWHEEL_FAILURE,
+  GET_MOTORWHEEL_SUCCESS,
+
+  GET_BIKE_REQUEST,
+  GET_BIKE_FAILURE,
+  GET_BIKE_SUCCESS,
+
+  GET_SCOOTER_REQUEST,
+  GET_SCOOTER_FAILURE,
+  GET_SCOOTER_SUCCESS,
+
+  GET_BABY_REQUEST,
+  GET_BABY_FAILURE,
+  GET_BABY_SUCCESS,
+
 } from './actionTypes';
 
-
-export const getCartDataRequest = setData => ({
-  type: GET_CARTDATA_REQUEST,
-  payload: { setData },
+export const getBabyRequest = () => ({
+  type: GET_BABY_REQUEST,
 });
 
-export const getCartDataFailure = errorCartData => ({
-  type: GET_CARTDATA_FAILURE,
-  payload: { errorCartData },
+export const getBabyFailure = errorBaby => ({
+  type: GET_BABY_FAILURE,
+  payload: { errorBaby },
 });
 
-export const getCartDataSuccess = cartData => ({
-  type: GET_CARTDATA_SUCCESS,
-  payload: { cartData },
+export const getBabySuccess = baby => ({
+  type: GET_BABY_SUCCESS,
+  payload: { baby },
 });
 
-export const postCartRequest = data => ({
-  type: POST_CART_REQUEST,
-  payload: { data },
+
+export const getScooterRequest = () => ({
+  type: GET_SCOOTER_REQUEST,
 });
 
-export const postCartFailure = errorCart => ({
-  type: POST_CART_FAILURE,
-  payload: { errorCart },
+export const getScooterFailure = errorScooter => ({
+  type: GET_SCOOTER_FAILURE,
+  payload: { errorScooter },
 });
 
-export const postCartSuccess = cart => ({
-  type: POST_CART_SUCCESS,
-  payload: { cart },
+export const getScooterSuccess = scooter => ({
+  type: GET_SCOOTER_SUCCESS,
+  payload: { scooter },
 });
 
-export const getOrderInfoRequest = (idInfo) => ({
+
+export const getBikeRequest = () => ({
+  type: GET_BIKE_REQUEST,
+});
+
+export const getBikeFailure = errorBikeMain => ({
+  type: GET_BIKE_FAILURE,
+  payload: { errorBikeMain },
+});
+
+export const getBikeSuccess = bikeMain => ({
+  type: GET_BIKE_SUCCESS,
+  payload: { bikeMain },
+});
+
+export const getMotorWheelRequest = () => ({
+  type: GET_MOTORWHEEL_REQUEST,
+});
+
+export const getMotorWheelFailure = errorMotorWheel => ({
+  type: GET_MOTORWHEEL_FAILURE,
+  payload: { errorMotorWheel },
+});
+
+export const getMotorWheelSuccess = motorWheel => ({
+  type: GET_MOTORWHEEL_SUCCESS,
+  payload: { motorWheel },
+});
+
+export const getListBikeRequest = () => ({
+  type: GET_LISTBIKE_REQUEST,
+});
+
+export const getListBikeFailure = errorBike => ({
+  type: GET_LISTBIKE_FAILURE,
+  payload: { errorBike },
+});
+
+export const getListBikeSuccess = bike => ({
+  type: GET_LISTBIKE_SUCCESS,
+  payload: { bike },
+});
+
+
+
+export const getListSunRequest = () => ({
+  type: GET_LISTSUN_REQUEST,
+});
+
+export const getListSunFailure = errorSun => ({
+  type: GET_LISTSUN_FAILURE,
+  payload: { errorSun },
+});
+
+export const getListSunSuccess = sun => ({
+  type: GET_LISTSUN_SUCCESS,
+  payload: { sun },
+});
+
+
+export const getListBettRequest = () => ({
+  type: GET_LISTBETT_REQUEST,
+});
+
+export const getListBettFailure = errorBett => ({
+  type: GET_LISTBETT_FAILURE,
+  payload: { errorBett },
+});
+
+export const getListBettSuccess = bett => ({
+  type: GET_LISTBETT_SUCCESS,
+  payload: { bett },
+});
+
+
+export const getListInfoRequest = () => ({
+  type: GET_LISTINFO_REQUEST,
+});
+
+export const getListInfoFailure = errorList => ({
+  type: GET_LISTINFO_FAILURE,
+  payload: { errorList },
+});
+
+export const getListInfoSuccess = listInfo => ({
+  type: GET_LISTINFO_SUCCESS,
+  payload: { listInfo },
+});
+
+export const getOrderInfoRequest = () => ({
   type: GET_ORDERINFO_REQUEST,
-  payload: { idInfo },
 });
 
 export const getOrderInfoFailure = errorInfo => ({
@@ -70,98 +172,39 @@ export const getOrderInfoFailure = errorInfo => ({
   payload: { errorInfo },
 });
 
-export const getOrderInfoSuccess = orderInfo => ({
+export const getOrderInfoSuccess = newsInfo => ({
   type: GET_ORDERINFO_SUCCESS,
-  payload: { orderInfo },
-});
-
-export const searchItemsRequest = search => ({
-  type: SEARCH_ITEMS_REQUEST,
-  payload: { search },
-});
-
-export const searchItemsFailure = errorSearch => ({
-  type: SEARCH_ITEMS_FAILURE,
-  payload: { errorSearch },
-});
-
-export const searchItemsSuccess = itemsSearch => ({
-  type: SEARCH_ITEMS_SUCCESS,
-  payload: { itemsSearch },
-});
-
-export const changeSearchField = searchChange => ({
-  type: CHANGE_SEARCH_FIELD,
-  payload: { searchChange },
+  payload: { newsInfo },
 });
 
 
-export const getAddItemsRequest = (coin, cat) => ({
-  type: GET_ADDITEMS_REQUEST,
-  payload: { coin, cat },
+
+export const getListMotorRequest = () => ({
+  type: GET_LISTMOTOR_REQUEST,
 });
 
-export const getAddItemsFailure = errorAddItems => ({
-  type: GET_ADDITEMS_FAILURE,
-  payload: { errorAddItems },
+export const getListMotorFailure = errorMotor => ({
+  type: GET_LISTMOTOR_FAILURE,
+  payload: { errorMotor },
 });
 
-export const getAddItemsSuccess = additems => ({
-  type: GET_ADDITEMS_SUCCESS,
-  payload: { additems },
+export const getListMotorSuccess = motor => ({
+  type: GET_LISTMOTOR_SUCCESS,
+  payload: { motor },
 });
 
-export const getItemsCatRequest = (id) => ({
-  type: GET_ITEMSCAT_REQUEST,
-  payload: { id },
+
+
+export const getListGibridRequest = () => ({
+  type: GET_LISTGIBRID_REQUEST,
 });
 
-export const getItemsCatFailure = errorItemsCat => ({
-  type: GET_ITEMSCAT_FAILURE,
-  payload: { errorItemsCat },
+export const getListGibridFailure = errorGibrid => ({
+  type: GET_LISTGIBRID_FAILURE,
+  payload: { errorGibrid },
 });
 
-export const getItemsCatSuccess = itemsCat => ({
-  type: GET_ITEMSCAT_SUCCESS,
-  payload: { itemsCat },
-});
-export const getItemsRequest = () => ({
-  type: GET_ITEMS_REQUEST,
-});
-
-export const getItemsFailure = error => ({
-  type: GET_ITEMS_FAILURE,
-  payload: { error },
-});
-
-export const getItemsSuccess = items => ({
-  type: GET_ITEMS_SUCCESS,
-  payload: { items },
-});
-export const getCategoriesRequest = () => ({
-  type: GET_CATEGORIES_REQUEST,
-});
-
-export const getCategoriesFailure = errorCat => ({
-  type: GET_CATEGORIES_FAILURE,
-  payload: { errorCat },
-});
-
-export const getCategoriesSuccess = categories => ({
-  type: GET_CATEGORIES_SUCCESS,
-  payload: { categories },
-});
-
-export const getHitRequest = () => ({
-  type: GET_HIT_REQUEST,
-});
-
-export const getHitFailure = errorHit => ({
-  type: GET_HIT_FAILURE,
-  payload: { errorHit },
-});
-
-export const getHitSuccess = hits => ({
-  type: GET_HIT_SUCCESS,
-  payload: { hits },
+export const getListGibridSuccess = gibrid => ({
+  type: GET_LISTGIBRID_SUCCESS,
+  payload: { gibrid },
 });

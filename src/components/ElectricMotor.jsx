@@ -8,32 +8,9 @@ import motor2 from '../img/motor2.jpg';
 import motor3 from '../img/motor3.jpg';
 import motor4 from '../img/motor4.jpg';
 import electrobel2 from '../img/electro-bel2.jpg';
+import { NavLink } from 'react-router-dom'
 
 export default function ElectricMotor(props) {
-    // const { hits, loading, error } = useSelector(state => state.skills);
-    // const dispatch = useDispatch();
-
-    // useEffect(() => {
-    //     dispatch(getHitRequest());
-    // }, [dispatch])
-
-    // if (hits === undefined || hits.length === 0) {
-    //     return null;
-    // }
-
-    // const getOrderRequest = id => {
-    //     console.log(id)
-    //     dispatch(getOrderInfoRequest(id));
-    //     // props.history.push(`/catalog/${id}`);
-    //     props.history.push(`/react-shoe-store/build/catalog/${id}`);
-    // };
-
-    // if (loading) {
-    //     return <Loader></Loader>;
-    // }
-    // if (error) {
-    //     return <p className="error">Произошла ошибка!</p>;
-    // }
     console.log(motors)
     let hits = motors.text;
     let arr = hits.split('\n\n');
@@ -41,7 +18,7 @@ export default function ElectricMotor(props) {
     let id = 0;
     arr.forEach(e => {
         arrHits.push({
-            "id": id,
+            "id": id === 0 ? 6 : id === 1 ? 0 : id === 2 ? 2 : id === 3 ? 5 : id,
             "header": e.split("\"header\":")[1].split("\"img\":")[0].slice(2, -4),
             "img": e.split("\"img\":")[1].split("\"text\":")[0].slice(2, -4),
             "text": e.split("\"text\":")[1].slice(2, -2),
@@ -50,6 +27,7 @@ export default function ElectricMotor(props) {
     });
     const [hitsData, setHitsData] = useState(arrHits.slice(0, 4));
 
+
     return (
         <Fragment>
             <section className="top-sales">
@@ -57,13 +35,12 @@ export default function ElectricMotor(props) {
                 <div className="row row-line">
                     {hitsData.map(o =>
                         <div className="col-3">
-                            <div className="card card-line">
-                                <p className="card-text">{o.header}</p>
-                                <img src={o.img} className="card-img-top img-fluid" alt={o.header} />
-                                {/* <div className="card-body">
-                                    <p className="card-text">{o.text}</p>
-                                </div> */}
-                            </div>
+                            <NavLink className="a-link" exact to={`/electromobiles/motor/${o.id}`}>
+                                <div className="card card-line">
+                                    <p className="card-text">{o.header}</p>
+                                    <img src={o.img} className="card-img-top img-fluid d-none d-md-block" alt={o.header} />
+                                </div>
+                            </NavLink>
                         </div>)}
                 </div>
             </section>

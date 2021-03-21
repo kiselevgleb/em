@@ -3,7 +3,6 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Hit from './components/Hit';
-import Items from './components/Items';
 import Catalog from './components/Catalog';
 import ElectricMotor from './components/ElectricMotor';
 import CatalogBottom from './components/CatalogBottom';
@@ -16,17 +15,12 @@ export default function Main(props) {
             <main className="container">
                 <div className="row">
                     <div className="col">
-                        <Banner></Banner>
+                        <Banner history={props.history}></Banner>
 
                         <Hit history={props.history}></Hit>
                         <Catalog history={props.history}></Catalog>
                         <ElectricMotor history={props.history}></ElectricMotor>
                         <CatalogBottom history={props.history}></CatalogBottom>
-
-                        {/* <section className="catalog">
-                            <h2 className="text-center">Каталог</h2>
-                            <Items history={props.history}></Items>
-                        </section> */}
                     </div>
                 </div>
             </main>

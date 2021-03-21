@@ -1,91 +1,63 @@
-export const postCart = async (data) => {
-    const response = await fetch(`${process.env.REACT_APP_ORDER_URL}`,
-        {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json;charset=utf-8' },
-            body: data
-        }
-    );
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    } else {
-        return true;
-    }
+import listElectrHand from '../content/electrisCarsHandMade/list.json';
+import listElectr from '../content/electrisCarsCatalog/list.json';
+import listGibrid from '../content/electrisGibrid/list.json';
+import listMotor from '../content/electricMotors/list.json';
+import listBett from '../content/electrisBatteries/list.json';
+import listSun from '../content/electrisSun/list.json';
+import listBike from '../content/electrisBike/list.json';
+import listMotorWheel from '../content/motorWheel/list.json';
+import listBikeMain from '../content/bike/list.json';
+import listScooter from '../content/electricsScooter/list.json';
+import listBaby from '../content/electrisBabyCarsHandMade/list.json';
+
+export const baby = () => {
+    const response =  listBaby;
+    return response;
 }
 
-export const listItems = async () => {
-    const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
+
+export const bett = () => {
+    const response =  listBett;
+    return response;
 }
 
-export const orderInfo = async (id) => {
-    const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}/${id}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
+export const motor = () => {
+    const response = listMotor;
+    return response;
 }
 
-export const itemsInCategory = async (id) => {
-    const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}?categoryId=${id}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
+export const gibrid = () => {
+    const response = listGibrid;
+    return response;
 }
 
-export const listHits = async () => {
-    const response = await fetch(`${process.env.REACT_APP_HIT_URL}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
-}
-export const listCategories = async () => {
-    const response = await fetch(`${process.env.REACT_APP_CATEGORIES_URL}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
+export const newsInfo = () => {
+    const response = listElectrHand;
+    return response;
 }
 
-export const addItems = async (coin, cat) => {
-    if (cat !== "") {
-        const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}?categoryId=${cat}&offset=${coin}`);
-        if (!response.ok) {
-            throw new Error(response.statusText);
-        }
-        return await response.json();
-    } else {
-        const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}?offset=${coin}`);
-        if (!response.ok) {
-            throw new Error(response.statusText);
-        }
-        return await response.json();
-    }
+export const listInfo = () => {
+    const response =  listElectr;
+    return response;
 }
 
-export const searchItems = async (search) => {
-    const response = await fetch(`${process.env.REACT_APP_ITEMS_URL}?q=${search}`);
-    if (!response.ok) {
-        throw new Error(response.statusText);
-    }
-    return await response.json();
+export const sun = () => {
+    const response =  listSun;
+    return response;
 }
-export const getCartData = async (setData) => {
-    let cartInfo = await localStorage.getItem('orderInfo');
-
-    if (cartInfo == null && setData === 'ref') {
-        await localStorage.setItem('orderInfo', JSON.stringify([]));
-    } else if (setData === 'rem') {
-        await localStorage.setItem('orderInfo', JSON.stringify([]));
-    } else if (cartInfo != null && setData === 'ref') {
-    } else {
-        await localStorage.setItem('orderInfo', JSON.stringify(setData));
-    }
-    cartInfo = await localStorage.getItem('orderInfo');
-    return cartInfo;
+export const bike = () => {
+    const response =  listBike;
+    return response;
+}
+export const motorWheel = () => {
+    const response =  listMotorWheel;
+    return response;
+}
+export const bikeMain = () => {
+    const response =  listBikeMain;
+    return response;
+}
+export const scooter = () => {
+    const response =  listScooter;
+    return response;
 }

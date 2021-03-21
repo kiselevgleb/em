@@ -1,160 +1,191 @@
 import { takeEvery, takeLatest, put, spawn, debounce, retry } from 'redux-saga/effects';
-import { getCartDataSuccess, getCartDataFailure, postCartSuccess, postCartFailure, getOrderInfoSuccess, getOrderInfoFailure, searchItemsSuccess, searchItemsFailure, searchItemsRequest, getAddItemsSuccess, getAddItemsFailure, getItemsSuccess, getItemsFailure, getHitSuccess, getHitFailure, getCategoriesSuccess, getCategoriesFailure, getItemsCatSuccess, getItemsCatFailure } from '../actions/actionCreators';
-import { GET_CARTDATA_REQUEST, POST_CART_REQUEST, GET_ORDERINFO_REQUEST, SEARCH_ITEMS_REQUEST, CHANGE_SEARCH_FIELD, GET_HIT_REQUEST, GET_ITEMS_REQUEST, GET_CATEGORIES_REQUEST, GET_ITEMSCAT_REQUEST, GET_ADDITEMS_REQUEST } from '../actions/actionTypes';
-import { postCart, listItems, listHits, listCategories, itemsInCategory, addItems, searchItems, orderInfo, getCartData } from '../api/index';
+import {getBabySuccess, getBabyFailure, getScooterSuccess, getScooterFailure, getBikeSuccess, getBikeFailure, getMotorWheelSuccess, getMotorWheelFailure, getListBikeSuccess, getListBikeFailure, getListSunSuccess, getListSunFailure, getListBettSuccess, getListBettFailure, getListMotorSuccess, getListMotorFailure, getListGibridSuccess, getListGibridFailure, getListInfoSuccess, getListInfoFailure, getOrderInfoSuccess, getOrderInfoFailure} from '../actions/actionCreators';
+import { GET_BABY_REQUEST, GET_SCOOTER_REQUEST, GET_BIKE_REQUEST, GET_MOTORWHEEL_REQUEST, GET_LISTBIKE_REQUEST, GET_LISTSUN_REQUEST, GET_LISTBETT_REQUEST, GET_LISTMOTOR_REQUEST, GET_LISTGIBRID_REQUEST, GET_ORDERINFO_REQUEST, GET_LISTINFO_REQUEST } from '../actions/actionTypes';
+import { newsInfo, listInfo, gibrid, motor, bett, sun, bike, motorWheel, bikeMain, scooter, baby } from '../api/index';
 
 
-function filterCartDataAction({ type, payload }) {
-    return type === GET_CARTDATA_REQUEST && payload.setData !== ''
+
+function* watchBabySaga() {
+    yield takeEvery(GET_BABY_REQUEST, handleBabySaga);
 }
 
 // worker
-function* handleCartDataSaga(action) {
+function* handleBabySaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        console.log(action.payload)
-        const data = yield retry(retryCount, retryDelay, getCartData, action.payload.setData);
-        yield put(getCartDataSuccess(data));
+        const data = yield retry(retryCount, retryDelay, baby);
+        yield put(getBabySuccess(data));
     } catch (e) {
-        yield put(getCartDataFailure(e.message));
+        yield put(getBabyFailure(e.message));
     }
 }
 
-// watcher
-function* watchCartDataSaga() {
-    yield debounce(100, filterCartDataAction, handleCartDataSaga);
-}
 
-function filterChangeSearchAction({ type, payload }) {
-    return type === CHANGE_SEARCH_FIELD && payload.searchChange.trim() !== ''
+function* watchScooterSaga() {
+    yield takeEvery(GET_SCOOTER_REQUEST, handleScooterSaga);
 }
 
 // worker
-function* handleChangeSearchSaga(action) {
-    yield put(searchItemsRequest(action.payload.searchChange));
-}
-
-// watcher
-function* watchChangeSearchSaga() {
-    yield debounce(100, filterChangeSearchAction, handleChangeSearchSaga);
-}
-
-
-
-// worker
-function* handleSearchItemsSaga(action) {
+function* handleScooterSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, searchItems, action.payload.search);
-        yield put(searchItemsSuccess(data));
+        const data = yield retry(retryCount, retryDelay, scooter);
+        yield put(getScooterSuccess(data));
     } catch (e) {
-        yield put(searchItemsFailure(e.message));
+        yield put(getScooterFailure(e.message));
     }
 }
 
-// watcher
-function* watchSearchItemsSaga() {
-    yield takeLatest(SEARCH_ITEMS_REQUEST, handleSearchItemsSaga);
-}
 
-function filterGetAddItemsAction({ type, payload }) {
-    return type === GET_ADDITEMS_REQUEST && payload.coin !== ''
-}
 
-// watcher
-function* watchGetAddItemsSaga() {
-    yield debounce(100, filterGetAddItemsAction, handleGetAddItemsSaga);
+function* watchBikeSaga() {
+    yield takeEvery(GET_BIKE_REQUEST, handleBikeSaga);
 }
 
 // worker
-function* handleGetAddItemsSaga(action) {
+function* handleBikeSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, addItems, action.payload.coin, action.payload.cat);
-        yield put(getAddItemsSuccess(data));
+        const data = yield retry(retryCount, retryDelay, bikeMain);
+        yield put(getBikeSuccess(data));
     } catch (e) {
-        yield put(getAddItemsFailure(e.message));
+        yield put(getBikeFailure(e.message));
     }
 }
 
-function filterGetItemsCatAction({ type, payload }) {
-    return type === GET_ITEMSCAT_REQUEST && payload.id !== ''
-}
 
-// watcher
-function* watchGetItemsCatSaga() {
-    yield debounce(100, filterGetItemsCatAction, handleGetItemsCatSaga);
+function* watchMotorWheelSaga() {
+    yield takeEvery(GET_MOTORWHEEL_REQUEST, handleMotorWheelSaga);
 }
 
 // worker
-function* handleGetItemsCatSaga(action) {
+function* handleMotorWheelSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, itemsInCategory, action.payload.id);
-        yield put(getItemsCatSuccess(data));
+        const data = yield retry(retryCount, retryDelay, motorWheel);
+        yield put(getMotorWheelSuccess(data));
     } catch (e) {
-        yield put(getItemsCatFailure(e.message));
+        yield put(getMotorWheelFailure(e.message));
     }
 }
 
-function* handleGetHitsSaga(action) {
+
+
+
+function* watchListBikeSaga() {
+    yield takeEvery(GET_LISTBIKE_REQUEST, handleListBikeSaga);
+}
+
+// worker
+function* handleListBikeSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, listHits);
-        yield put(getHitSuccess(data));
+        const data = yield retry(retryCount, retryDelay, bike);
+        yield put(getListBikeSuccess(data));
     } catch (e) {
-        yield put(getHitFailure(e.message));
+        yield put(getListBikeFailure(e.message));
     }
 }
+
+function* watchListSunSaga() {
+    yield takeEvery(GET_LISTSUN_REQUEST, handleListSunSaga);
+}
+
+// worker
+function* handleListSunSaga(action) {
+    try {
+        const retryCount = 3;
+        const retryDelay = 1 * 1000; // ms
+        const data = yield retry(retryCount, retryDelay, sun);
+        yield put(getListSunSuccess(data));
+    } catch (e) {
+        yield put(getListSunFailure(e.message));
+    }
+}
+
+
+
+
+function* watchListBettSaga() {
+    yield takeEvery(GET_LISTBETT_REQUEST, handleListBettSaga);
+}
+
+// worker
+function* handleListBettSaga(action) {
+    try {
+        const retryCount = 3;
+        const retryDelay = 1 * 1000; // ms
+        const data = yield retry(retryCount, retryDelay, bett);
+        yield put(getListBettSuccess(data));
+    } catch (e) {
+        yield put(getListBettFailure(e.message));
+    }
+}
+
 
 // watcher
-function* watchGetHitsSaga() {
-    yield takeEvery(GET_HIT_REQUEST, handleGetHitsSaga);
+function* watchListMotorSaga() {
+    yield takeEvery(GET_LISTMOTOR_REQUEST, handleListMotorSaga);
 }
 
-function* handleGetCategoriesSaga(action) {
+// worker
+function* handleListMotorSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, listCategories);
-        yield put(getCategoriesSuccess(data));
+        const data = yield retry(retryCount, retryDelay, motor);
+        yield put(getListMotorSuccess(data));
     } catch (e) {
-        yield put(getCategoriesFailure(e.message));
+        yield put(getListMotorFailure(e.message));
     }
 }
+
+
+
 // watcher
-function* watchGetCategoriesSaga() {
-    yield takeEvery(GET_CATEGORIES_REQUEST, handleGetCategoriesSaga);
+function* watchListGibridSaga() {
+    yield takeEvery(GET_LISTGIBRID_REQUEST, handleListGibridSaga);
 }
 
-function* handleGetItemsSaga(action) {
+// worker
+function* handleListGibridSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, listItems);
-        yield put(getItemsSuccess(data));
+        const data = yield retry(retryCount, retryDelay, gibrid);
+        yield put(getListGibridSuccess(data));
     } catch (e) {
-        yield put(getItemsFailure(e.message));
+        yield put(getListGibridFailure(e.message));
     }
 }
 
+
 // watcher
-function* watchGetItemsSaga() {
-    yield takeEvery(GET_ITEMS_REQUEST, handleGetItemsSaga);
+function* watchListInfoSaga() {
+    yield takeEvery(GET_LISTINFO_REQUEST, handleListInfoSaga);
 }
 
-function filterOrderInfoAction({ type, payload }) {
-    return type === GET_ORDERINFO_REQUEST && payload.idInfo !== ''
+// worker
+function* handleListInfoSaga(action) {
+    try {
+        const retryCount = 3;
+        const retryDelay = 1 * 1000; // ms
+        const data = yield retry(retryCount, retryDelay, listInfo);
+        yield put(getListInfoSuccess(data));
+    } catch (e) {
+        yield put(getListInfoFailure(e.message));
+    }
 }
+
 
 // watcher
 function* watchOrderInfoSaga() {
-    yield debounce(100, filterOrderInfoAction, handleOrderInfoSaga);
+    yield takeEvery(GET_ORDERINFO_REQUEST, handleOrderInfoSaga);
 }
 
 // worker
@@ -162,43 +193,26 @@ function* handleOrderInfoSaga(action) {
     try {
         const retryCount = 3;
         const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, orderInfo, action.payload.idInfo);
+        const data = yield retry(retryCount, retryDelay, newsInfo);
         yield put(getOrderInfoSuccess(data));
     } catch (e) {
         yield put(getOrderInfoFailure(e.message));
     }
 }
 
-function filterPostCartAction({ type, payload }) {
-    return type === POST_CART_REQUEST && payload.data !== ''
-}
 
-// watcher
-function* watchPostCartSaga() {
-    yield debounce(100, filterPostCartAction, handlePostCartSaga);
-}
-
-// worker
-function* handlePostCartSaga(action) {
-    try {
-        const retryCount = 3;
-        const retryDelay = 1 * 1000; // ms
-        const data = yield retry(retryCount, retryDelay, postCart, action.payload.data);
-        yield put(postCartSuccess(data));
-    } catch (e) {
-        yield put(postCartFailure(e.message));
-    }
-}
 
 export default function* saga() {
-    yield spawn(watchCartDataSaga);
-    yield spawn(watchPostCartSaga);
-    yield spawn(watchGetItemsSaga);
-    yield spawn(watchGetHitsSaga);
-    yield spawn(watchGetCategoriesSaga);
-    yield spawn(watchGetItemsCatSaga);
-    yield spawn(watchGetAddItemsSaga);
-    yield spawn(watchChangeSearchSaga);
-    yield spawn(watchSearchItemsSaga);
+    yield spawn(watchBabySaga);
+
+    yield spawn(watchScooterSaga);
+    yield spawn(watchBikeSaga);
+    yield spawn(watchMotorWheelSaga);
+    yield spawn(watchListBikeSaga);
+    yield spawn(watchListGibridSaga);
     yield spawn(watchOrderInfoSaga);
+    yield spawn(watchListInfoSaga);
+    yield spawn(watchListMotorSaga);
+    yield spawn(watchListBettSaga);
+    yield spawn(watchListSunSaga);
 }
