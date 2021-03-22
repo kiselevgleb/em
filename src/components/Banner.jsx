@@ -3,7 +3,8 @@ import ban from '../img/header-porsche.jpg';
 import ban2 from '../img/header1.jpg';
 import ban3 from '../img/header4.jpg';
 import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+// import 'react-awesome-slider/dist/styles.css';
+import '../css/styles-ban.css';
 import { useSelector, useDispatch } from 'react-redux';
 import Loader from 'react-loader';
 import { NavLink } from 'react-router-dom'
